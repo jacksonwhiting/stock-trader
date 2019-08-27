@@ -1,28 +1,32 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <app-shared-nav-bar></app-shared-nav-bar>
+    <v-content>
+      <router-view></router-view>
+    </v-content>
+    <app-shared-bottom-nav></app-shared-bottom-nav>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import sharedNavBar from './shared/sharedNavBar.vue';
+import Home from './pages/home.vue';
+import Portfolio from './pages/portfolio.vue';
+import Stocks from './pages/stocks.vue';
+import sharedBottomNav from './shared/sharedBottomNavBar';
 
 export default {
-  name: 'app',
   components: {
-    HelloWorld
+    'appSharedNavBar': sharedNavBar,
+    'appHome': Home,
+    'appPortfolio': Portfolio,
+    'appStocks': Stocks,
+    'appSharedBottomNav': sharedBottomNav
   }
+ 
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
