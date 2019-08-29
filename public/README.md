@@ -7,10 +7,10 @@
 
 * Is this a bullet list?
    * What happens now?
-      *How about now?
+      * How about now?
 
 1. How do numbered lists work?
-   a. What if we set a letter to it?
-   b. How about now?
+   * What if we set a letter to it?
+   * How about now?
 
 
